@@ -11,7 +11,7 @@ export default function Error(){
 				<h3 className="error-oops">Oups ! La page que vous demandez n&apos;existe pas.</h3>
 				<p className="error-home"><Link to='/'>Retourner à la page d&apos;accueil</Link></p>
 			</main>
-				<Footer/>
+			<Footer/>
 		</>
 	)
 }

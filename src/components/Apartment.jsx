@@ -18,7 +18,6 @@ Apt.propTypes = {
   };
 
 export default function Apt({title, pictures, description, hostName, hostPicture, rating, location, equipments, tags}) {
-    //let test
 
 return (
     <>

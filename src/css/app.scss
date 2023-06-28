@@ -1,0 +1,248 @@
+@use 'setup';
+@use 'navlinks';
+@use 'home_img';
+@use 'gallery';
+@use 'apartment';
+@use 'carousel';
+@use 'collapse';
+@use 'error';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+#root{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+header{
+    padding-top: 3em;
+    margin-inline: 6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: setup.$pink;
+}
+
+main{
+    margin-inline: 6em;
+    
+}
+
+footer{
+    background-color: black;
+    margin-top: 3em;
+    padding: 4em;
+    color: white;
+    text-align: center;
+        svg{
+            width: 8em;
+        }
+        h1{
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+}
+
+@media (max-width: 1024px) {
+    main, header{
+        margin-inline: 3em;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    main, header{
+        margin-inline: 1em;
+    }
+
+    header{
+        padding-top: 1em;
+    }
+
+    header svg{
+        width: 8em;
+    }
+
+    .nav-links{
+        font-size: smaller;
+        text-transform: uppercase;
+    }
+
+    .home-img{
+        margin-top: 1em;
+        img{
+            border-radius: 1em;
+            height: 8em;
+        }
+        .home-img-txt {
+            font-size: revert;
+            left: 42%;
+            text-align: initial;
+            padding: 1em;
+        }
+    }
+
+    .locs-tiles{
+        grid-template-columns: 1fr;
+        background-color: white;
+        padding: 0;
+        grid-row-gap: 20px;
+        .locs-tile{
+            border-radius: 1em;
+            img{
+                border-radius: 1em 1em 0 0;
+            }
+        }
+    }
+
+    .apt-collapse{
+        column-gap: 1em;
+    }
+
+    .collapse-wrapper{
+        margin: 2em 0;
+    }
+
+    .collapse-desc{
+        font-size: medium;
+    }
+
+    .collapse{
+        padding: 0.3em 0.8em;
+        margin-top: 1.5em;
+        i{
+            font-size: x-large;
+        }
+    }
+
+    .collapse-title{
+        font-size: medium;
+    }
+
+    .carousel{
+        border-radius: 1em;
+    }
+
+    .carousel-wrapper{
+        height: 20em;
+    }
+
+    .carousel-arrow{
+        font-size: 2em;
+    }
+
+    .carousel-counter{
+        opacity: 0;
+    }
+
+    .apt{
+        margin-block: 1.5em;
+    }
+
+    .apt-title-bkg{
+        border-radius: 0 0 1em 1em;
+    }
+
+    .apt-flex{
+        margin-block: 1em;
+    }
+
+    .apt-wrapper{
+        display: block;
+    }
+
+    .apt-left-title{
+        font-size: x-large;
+    }
+
+    .apt-location{
+        margin-top: 1em;
+        font-size: initial;
+    }
+
+    .apt-tags{
+        margin-top: 1em;
+        flex-wrap: wrap;
+        p{
+            padding: 0.3em 2em;
+        }
+    }
+
+    .apt-profile-pic{
+        width: 3em;
+        height: 3em;
+    }
+
+    .apt-profile-name{
+        line-height: initial;
+        font-size: initial;
+    }
+
+    .apt-right{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .apt-rating-wrapper{
+        margin: 0;
+        font-size: revert;
+    }
+
+    .apt-collapse{
+        display: block;
+    }
+    
+
+    footer h1{
+        font-size: smaller;
+    }
+
+    .error{
+        font-size: 8em;
+    }
+
+    .error-oops {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 375px) {
+    .nav-links{
+        gap: 1em;
+    }
+
+    .home-img .home-img-txt{
+        font-size: x-large;
+    }
+
+    .error-home {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 320px) {
+    header{
+        display: block;
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .nav-links{
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+    }
+
+    .error{
+        font-size: 6em;
+    }
+
+    .error-oops {
+        font-size: larger;
+    }
+}

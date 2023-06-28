@@ -1,0 +1,62 @@
+@use 'setup';
+
+.collapse-wrapper{
+    margin: 2em 6em;
+}
+
+.collapse{
+    background-color: setup.$pink;
+    border-radius: setup.$littleradius;
+    padding: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    i{
+        color: white;
+        font-size: xx-large;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.collapse-up{
+    transform: rotate(0deg);
+    transition: .1s ease-in-out;
+}
+
+.collapse-down{
+    transform: rotate(180deg);
+    transition: .1s ease-in-out;
+}
+
+.collapse-title{
+    font-size: x-large;
+    color: white;
+    font-weight: 500;
+}
+
+.collapse-title-apt{
+    font-size: large;
+}
+
+.collapse-desc-wrapper{
+    background-color: setup.$lightgrey;
+    margin: -0.4em 0 0 0;
+    border-radius: 0 0 0.5em 0.5em;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height .3s ease-in-out;
+    &.show{
+        max-height: 17em;
+    }
+}
+
+.collapse-desc{
+    color: setup.$pink;
+    font-weight: 400;
+    font-size: large;
+    padding: 1.2em 1em 1em;
+}

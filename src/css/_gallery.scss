@@ -1,0 +1,46 @@
+@use 'setup';
+
+.locs-tiles{
+    margin-top: 2em;
+    background-color: setup.$lightgrey;
+    border-radius: setup.$bigradius;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 52px;
+	grid-row-gap: 52px;
+    padding: 3em;
+    .locs-tile{
+        transition: transform .1s ease-in-out;
+        display: grid;
+        cursor: pointer;
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.18);
+        border-radius: setup.$littleradius;
+            .locs-tile-text{
+                color: white;
+                font-size: large;
+            }
+            img{
+                height: 12em;
+                width: 100%;
+                object-fit: cover;
+                border-radius: setup.$littleradius setup.$littleradius 0 0;
+            }
+            &:hover{
+                transform: scale(1.03);
+            }
+    }
+}
+
+.apt-title-bkg{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, #9c4949 0%, #ff6060 100%);
+    border-radius: 0 0 setup.$littleradius setup.$littleradius;
+    height: 4em;
+    padding: 0.7em;
+}
+
+.apt-title{
+    color: white;
+    font-weight: 400;
+}

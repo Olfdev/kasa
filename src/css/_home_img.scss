@@ -1,0 +1,28 @@
+@use 'setup';
+
+.home-img{
+    margin-top: 3em;
+    border-radius: setup.$bigradius;
+    position: relative;
+    text-align: center;
+    .home-img-txt{
+        width: 90%;
+        color: white;
+        font-weight: 400;
+        font-size: 3em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    img{
+        height: 14em;
+        width: 100%;
+        object-fit: cover;
+        border-radius: setup.$bigradius;
+        filter: brightness(80%);
+    }
+    .home-responsive{
+        height: 14em;
+    }
+}
